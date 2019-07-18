@@ -1,17 +1,44 @@
 <?php
 
  /*@var $this yii\web\View;*/
+$this->title = 'House Stock';
 
-$this->title = 'My Yii Application';
 ?>
-<div class="site-index">
-    <div class="jumbotron">
-        <h1>Welcome to House Stock!</h1>
-
-        <p class="lead">This APP will let us to fill a data base with information about the food pantry which we use for to consume every day</p>
-
-        <p><a class="btn btn-lg btn-success" href="">Let's start Rox</a></p>
+<div class="site-index ">
+    <div class="btn-group buttonfiltertype">
+        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Select type of filter
+        </button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="">Department</a>
+            <a class="dropdown-item" href="">Provider</a>
+        </div>
     </div>
+    <div class="btn-group buttonfilterby">
+        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Filter filter by
+        </button>
+      <div class="dropdown-menu">
+          <a class="dropdown-item" href="">Bakery (panadería)</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="">Dairy (Lacteos)</a>
+          <a class="dropdown-item" href="">Grocery (Abarrotes)</a>
+          <a class="dropdown-item" href="">Meat (Carnes)</a>
+          <a class="dropdown-item" href="">Seafood (Mariscos)</a>
+      </div>  
+    </div>
+    <div class="jumbotron">
+        <!--We have this jumbotron to have space between the buttons filters and the table of articles -->
+    </div>
+   <!-- <?php //echo ButtonDropdown::widget([
+        //'label' => 'Action',
+        //'dropdown' =>   [
+          //  'items' =>      [
+            //    ['label' => 'Bakery (panadería)', 'url' => '#'],
+         //                   ],
+         //               ],
+        //]); 
+    ?>-->
 
     <div class="body-content">
 

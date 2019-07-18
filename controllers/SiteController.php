@@ -163,5 +163,11 @@ class SiteController extends Controller
         return $this->render('links');
     }
 
+    /**
+     * Display Inventory view.
+     */
+    public function actionInventory(){
+        return $this->render('inventory');
+    }
     // Fin- jtorres[13-05-2019]
 }

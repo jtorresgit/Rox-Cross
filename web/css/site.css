@@ -113,3 +113,21 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+/**
+ * Start
+ * buttons of filter jtorres@
+ */
+.buttonfiltertype {
+    position: relative;
+    top: 50px;
+    left: 150px;
+}
+.buttonfilterby {
+    position: relative;
+    top: 50px;
+    left: 300px;
+}
+/**
+ * End
+ * buttons of filter jtorres@
+ */

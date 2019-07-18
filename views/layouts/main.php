@@ -40,14 +40,27 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'Home',         'url' => ['/site/index']],
-            ['label' => 'Inventory',        'url' => ['/site/about']],
-            ['label' => 'Warehouse',         'url' => ['/site/maps']],
-            ['label' => 'FAQs',         'url' => ['/site/faqs']],
-            ['label' => 'Dictionary', 'url' => ['/site/abc']],
-            ['label' => 'Register Article',   'url' => ['site/affiliates']],
-            ['label' => 'Contact Us',   'url' => ['/site/contact']],
-            ['label' => 'Login',        'url' => ['site/links']],
+            ['label' => 'Home',             'url' => ['/site/index']],
+            ['label' => 'Inventory',        'url' => ['/site/inventory']],
+            ['label' => 'Warehouse',        'url' => ['/site/maps']],
+            ['label' => 'Cooking recipe',   'url' => ['/site/recipe']],
+            ['label' => 'Finances',         'url' => ['/site/finances']],
+            ['label' => 'Quotation',        'url' => ['/site/quotation']],
+            ['label' => 'File',             'url' => ['/site/file']],
+            ['label' => 'FAQs',             'url' => ['/site/faqs']],
+            ['label' => 'Dictionary',       'url' => ['/site/abc']],
+            ['label' => 'Admin',            'url' => ['#'],
+                        'items' => [
+                            ['label' => 'New user',         'url' => 'site/usr'],
+                            ['label' => 'New article',      'url' => 'site/article'],
+                            ['label' => 'New warehouse',    'url' => 'site/warehouse'],
+                            ['label' => 'New recipe',       'url' => 'site/recipe'],
+                            ['label' => 'New finances',     'url' => 'site/finances'],
+                                    ],
+            ],            
+            ['label' => 'Contact Us',       'url' => ['/site/contact']],
+            ['label' => 'Login',            'url' => ['site/login']],
+
             /*
             Por el momento no tenemos login así que lo comentamos. jtorres[13-05-2019]
             Yii::$app->user->isGuest ? (
