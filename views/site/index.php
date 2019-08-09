@@ -18,7 +18,7 @@ $this->title = 'My Yii Application';
         <div class="row">
             <div class="col-lg-12">
                 <h2>Table of Articles</h2>
-
+    
                 <p>This table show all articles which we  have actuality</p>
                 <table class="table">
                     <thead>

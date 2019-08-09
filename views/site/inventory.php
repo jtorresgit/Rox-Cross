@@ -2,10 +2,39 @@
 
  /*@var $this yii\web\View;*/
 $this->title = 'House Stock';
+use yii\helpers\Html;
+use yii\bootstrap\ButtonDropdown;
 
 ?>
+
 <div class="site-index ">
-    <div class="btn-group buttonfiltertype">
+  <?php  echo ButtonDropdown::widget([
+    'label' => 'Type of filter',
+    'dropdown' => [
+        'items' => [
+            ['label' => 'Department', 'url' => '/'],
+            ['label' => 'Provider', 'url' => '#'],
+            ],
+        ],
+    ]); 
+
+  ?>
+
+    
+  <?php  echo ButtonDropdown::widget([    
+    'label' => 'Filter by',
+    'dropdown' => [
+        'items' => [
+            ['label' => 'Bakery (panadería)', 'url' => '#'],
+            ['label' => 'Dairy  (lacteos)',  'url' => '#'],
+            ['label' => 'Grocery (abarrotes)', 'url' => '#'],
+            ['label' => 'Meat (carnes)', 'url' => '#'],
+            ['label' => 'Seafood (Mariscos)', 'url' => '#'],
+        ],
+      ],
+    ]);
+  ?>
+   <!-- <div class="btn-group buttonfiltertype">
         <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          Select type of filter
         </button>
@@ -26,20 +55,14 @@ $this->title = 'House Stock';
           <a class="dropdown-item" href="">Meat (Carnes)</a>
           <a class="dropdown-item" href="">Seafood (Mariscos)</a>
       </div>  
-    </div>
+    </div>-->
+  
     <div class="jumbotron">
         <!--We have this jumbotron to have space between the buttons filters and the table of articles -->
     </div>
-   <!-- <?php //echo ButtonDropdown::widget([
-        //'label' => 'Action',
-        //'dropdown' =>   [
-          //  'items' =>      [
-            //    ['label' => 'Bakery (panadería)', 'url' => '#'],
-         //                   ],
-         //               ],
-        //]); 
-    ?>-->
 
+  
+<?= yii\bootstrap\Progress::widget(['percent' => 60, 'label' => 'test']) ?>
     <div class="body-content">
 
         <div class="row">
